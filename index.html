@@ -3,21 +3,22 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#292b5c">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MathLearn — Belajar Matematika</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <section id="loginPage" class="login-screen">
+  <div id="loginPage" class="login-page">
     <div class="login-card">
-      <div class="login-mascot">🐱📚</div>
+      <div class="mascot">🐱🎀</div>
+      <p class="eyebrow">WELCOME TO</p>
       <h1>Math<span>Learn</span></h1>
-      <p class="muted">Belajar matematika, taklukkan tantangan, raih impianmu! ✨</p>
+      <p class="subtitle">Belajar matematika jadi lebih seru!</p>
       <form id="loginForm">
         <label for="studentName">Nama kamu</label>
-        <input id="studentName" required maxlength="40"
-          placeholder="Masukkan nama..." autocomplete="name">
+        <input id="studentName" placeholder="Tulis nama kamu..." required>
         <label for="studentClass">Kelas</label>
         <select id="studentClass" required>
           <option value="">Pilih kelas</option>
@@ -25,56 +26,40 @@
           <option value="11">Kelas 11</option>
           <option value="12">Kelas 12</option>
         </select>
-        <button class="primary-btn full">Mulai Petualangan 🚀</button>
+        <button class="primary-btn" type="submit">Mulai Belajar ✨</button>
       </form>
-      <p class="tiny">"Kamu tidak harus langsung hebat. Kamu hanya perlu terus belajar."</p>
+      <p class="tiny-note">Belajar sedikit demi sedikit, jadi jago setiap hari ♡</p>
     </div>
-  </section>
-
-  <div id="app" class="app hidden">
-    <aside class="sidebar" id="sidebar">
-      <div class="brand">🎓 Math<span>Learn</span></div>
-      <nav id="navigation">
-        <button class="nav-btn active" data-page="home">🏠 <span>Beranda</span></button>
-        <button class="nav-btn" data-page="materials">📚 <span>Materi</span></button>
-        <button class="nav-btn" data-page="practice">✏️ <span>Latihan Soal</span></button>
-        <button class="nav-btn" data-page="examples">📝 <span>Contoh Soal</span></button>
-        <button class="nav-btn" data-page="scores">📊 <span>Nilai Saya</span></button>
-      </nav>
-      <div class="sidebar-art">
-        <div class="big-cat">🐈</div>
-        <p>Pelan-pelan tidak apa-apa.<br>Yang penting jangan menyerah!</p>
-        <div class="formula-art">a² + b² = c²</div>
-      </div>
-      <div class="profile">
-        <div class="avatar">🧑🏻‍🎓</div>
-        <div class="profile-text">
-          <strong id="sideName">Pelajar</strong>
-          <small id="sideClass">Kelas 10</small>
-        </div>
-        <button id="logoutBtn" aria-label="Keluar" title="Keluar">↪</button>
-      </div>
-    </aside>
-
-    <main class="main-content">
-      <header class="topbar">
-        <button id="menuToggle" class="menu-toggle" aria-label="Buka menu">☰</button>
-        <div>
-          <strong>Ruang Belajar</strong>
-          <small>Tempat ide hebat dimulai ✨</small>
-        </div>
-        <div class="top-greeting">Kamu pasti bisa! 💪</div>
-      </header>
-
-      <div id="pageContent"></div>
-
-      <footer>
-        <p>MathLearn · Belajar hari ini, bersinar esok hari ⭐</p>
-        <p class="footer-quote">"Jangan takut salah, karena dari kesalahan kita belajar."</p>
-      </footer>
-    </main>
   </div>
 
+  <div id="app" class="app hidden">
+    <aside id="sidebar" class="sidebar">
+      <div class="brand"><span class="brand-icon">🌷</span><div>MathLearn<small>little steps, big progress!</small></div></div>
+      <div class="side-profile">
+        <div class="avatar">🐰</div>
+        <div><b id="sideName">Pelajar</b><small id="sideClass">Kelas 10</small></div>
+      </div>
+      <nav>
+        <button class="nav-btn active" data-page="home">🏠 <span>Beranda</span></button>
+        <button class="nav-btn" data-page="materials">📚 <span>Materi</span></button>
+        <button class="nav-btn" data-page="examples">✏️ <span>Contoh Soal</span></button>
+        <button class="nav-btn" data-page="practice">🧩 <span>Latihan Soal</span></button>
+        <button class="nav-btn" data-page="scores">🏆 <span>Nilai Saya</span></button>
+      </nav>
+      <div class="sidebar-note">🌼 Kamu pasti bisa! Jangan menyerah, ya!</div>
+      <button id="logoutBtn" class="logout-btn">Keluar ↗</button>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <button id="menuToggle" class="menu-toggle" aria-label="Buka menu">☰</button>
+        <div><small>HAPPY LEARNING DAY! ✨</small><h2 id="greeting">Halo, Pelajar!</h2></div>
+        <div class="top-emoji">🌸</div>
+      </header>
+      <section id="pageContent"></section>
+      <footer>Made with 💜 for little math explorers</footer>
+    </main>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
