@@ -3,20 +3,21 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MathLearn — Petualangan Matematika</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#292b5c">
+  <title>MathLearn — Belajar Matematika</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- LOGIN -->
   <section id="loginPage" class="login-screen">
     <div class="login-card">
       <div class="login-mascot">🐱📚</div>
       <h1>Math<span>Learn</span></h1>
-      <p class="muted">Petualangan seru menjelajahi dunia matematika!</p>
+      <p class="muted">Belajar matematika, taklukkan tantangan, raih impianmu! ✨</p>
       <form id="loginForm">
         <label for="studentName">Nama kamu</label>
-        <input id="studentName" type="text" placeholder="Masukkan nama..." required maxlength="40">
+        <input id="studentName" required maxlength="40"
+          placeholder="Masukkan nama..." autocomplete="name">
         <label for="studentClass">Kelas</label>
         <select id="studentClass" required>
           <option value="">Pilih kelas</option>
@@ -24,15 +25,14 @@
           <option value="11">Kelas 11</option>
           <option value="12">Kelas 12</option>
         </select>
-        <button class="primary-btn full" type="submit">Mulai Petualangan 🚀</button>
+        <button class="primary-btn full">Mulai Petualangan 🚀</button>
       </form>
-      <p class="tiny">Belajar sedikit demi sedikit, raih mimpi setinggi langit!</p>
+      <p class="tiny">"Kamu tidak harus langsung hebat. Kamu hanya perlu terus belajar."</p>
     </div>
   </section>
 
-  <!-- APLIKASI -->
   <div id="app" class="app hidden">
-    <aside class="sidebar">
+    <aside class="sidebar" id="sidebar">
       <div class="brand">🎓 Math<span>Learn</span></div>
       <nav id="navigation">
         <button class="nav-btn active" data-page="home">🏠 <span>Beranda</span></button>
@@ -43,24 +43,35 @@
       </nav>
       <div class="sidebar-art">
         <div class="big-cat">🐈</div>
-        <p>Belajar hari ini,<br>hebat esok hari!</p>
+        <p>Pelan-pelan tidak apa-apa.<br>Yang penting jangan menyerah!</p>
         <div class="formula-art">a² + b² = c²</div>
       </div>
       <div class="profile">
         <div class="avatar">🧑🏻‍🎓</div>
-        <div><strong id="sideName">Pelajar</strong><small id="sideClass">Kelas 10</small></div>
-        <button id="logoutBtn" title="Keluar" aria-label="Keluar">↪</button>
+        <div class="profile-text">
+          <strong id="sideName">Pelajar</strong>
+          <small id="sideClass">Kelas 10</small>
+        </div>
+        <button id="logoutBtn" aria-label="Keluar" title="Keluar">↪</button>
       </div>
     </aside>
 
     <main class="main-content">
       <header class="topbar">
         <button id="menuToggle" class="menu-toggle" aria-label="Buka menu">☰</button>
-        <div><strong>Ruang Belajar</strong><small>Tempat ide hebat dimulai ✨</small></div>
-        <div class="top-greeting">Semangat belajar! 💪</div>
+        <div>
+          <strong>Ruang Belajar</strong>
+          <small>Tempat ide hebat dimulai ✨</small>
+        </div>
+        <div class="top-greeting">Kamu pasti bisa! 💪</div>
       </header>
+
       <div id="pageContent"></div>
-      <footer>MathLearn · Terus belajar, raih cita-citamu! ⭐</footer>
+
+      <footer>
+        <p>MathLearn · Belajar hari ini, bersinar esok hari ⭐</p>
+        <p class="footer-quote">"Jangan takut salah, karena dari kesalahan kita belajar."</p>
+      </footer>
     </main>
   </div>
 
